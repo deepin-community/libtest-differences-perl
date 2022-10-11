@@ -1,0 +1,228 @@
+libtest-differences-perl (0.68-1) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends-Indep: Drop versioned constraint on libtext-diff-perl.
+    + libtest-differences-perl: Drop versioned constraint on libtext-diff-perl
+      in Depends.
+
+  [ gregor herrmann ]
+  * Import upstream version 0.68.
+  * debian/watch: drop uversionmangle. The matched version pattern hasn't
+    been seen in over a decade.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.5.1.
+  * Annotate test-only build dependencies with <!nocheck>.
+  * Bump debhelper-compat to 13.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 16 Aug 2021 18:31:17 +0200
+
+libtest-differences-perl (0.67-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * Import upstream version 0.66.
+
+  [ intrigeri ]
+  * Import upstream version 0.67
+  * Bump debhelper compatibility version to 12.
+  * Declare compatibility with Debian Policy 4.4.0.
+  * Make dependencies on libcapture-tiny-perl, that are satisfied
+    in oldoldstable, unversioned.
+  * Make dependency on libtest-simple-perl (provided by perl) explicit.
+
+ -- intrigeri <intrigeri@debian.org>  Sun, 21 Jul 2019 18:11:43 +0000
+
+libtest-differences-perl (0.65-1) unstable; urgency=medium
+
+  * Import upstream version 0.65.
+  * Update debian/upstream/metadata.
+  * Update upstream copyright holders.
+  * Drop versioned libtest-simple-perl build dependency.
+    This release fixes the issues with older Test::More versions.
+    Cf. #901080
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 21 Feb 2019 21:04:56 +0100
+
+libtest-differences-perl (0.64-4) unstable; urgency=medium
+
+  * Remove workarounds for build and autopkgtests failures with verbose
+    tests. Instead, build-depend on the fixed libtest-simple-perl version.
+    Cf. #901080
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.3.0.
+  * Bump debhelper compatibility level to 11.
+  * Remove trailing whitespace from debian/*.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 12 Jan 2019 19:14:48 +0100
+
+libtest-differences-perl (0.64-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix autopkgtest failures by unsetting test verbosity. (See #901080)
+  * Update to Standards-Version 4.2.1.
+  * Declare that the package does not need (fake)root to build.
+
+ -- Niko Tyni <ntyni@debian.org>  Fri, 07 Dec 2018 16:38:21 +0200
+
+libtest-differences-perl (0.64-2) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Remove Ignace Mouzannar from Uploaders. Thanks for your work!
+  * Remove Jay Bonci from Uploaders. Thanks for your work!
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * debian/rules: turn off verbosity for tests as a workaround for test
+    failures with newer Test-Simple. (Closes: #901080)
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.1.5.
+  * Drop unneeded version constraint from perl (build) dependency.
+  * Bump debhelper compatibility level to 10.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 21 Jul 2018 01:20:31 +0200
+
+libtest-differences-perl (0.64-1) unstable; urgency=medium
+
+  * Team upload.
+  * Import upstream version 0.64
+  * Bump debhelper compatibility level to 9
+  * Update upstream metadata
+  * Bump libtext-diff-perl version to 1.43
+
+ -- Lucas Kanashiro <kanashiro.duarte@gmail.com>  Sun, 22 Nov 2015 23:16:24 -0200
+
+libtest-differences-perl (0.63-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Import upstream version 0.63.
+  * Add debian/upstream/metadata.
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 3.9.6.
+  * Add explicit build dependency on libmodule-build-perl.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 06 Jun 2015 18:07:45 +0200
+
+libtest-differences-perl (0.62-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ gregor herrmann ]
+  * debian/control: remove Nicholas Bamber from Uploaders on request of
+    the MIA team.
+  * Strip trailing slash from metacpan URLs.
+
+  * New upstream release.
+  * debian/copyright: update Upstream-Contact.
+  * Update years of packaging copyright.
+  * Add (build) dependency on libcapture-tiny-perl.
+  * Declare compliance with Debian Policy 3.9.5.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 25 Jun 2014 23:11:31 +0200
+
+libtest-differences-perl (0.61-1) unstable; urgency=low
+
+  [ Nicholas Bamber ]
+  * Added myself to Uploaders
+  * New upstream release
+  * Upped standards version to 3.9.2
+  * Upped debhelper to 8
+  * Added debian/source/format
+  * Refreshed copyright
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+
+  [ gregor herrmann ]
+  * (Build) depend on perl >= 5.13 to get Data::Dumper 2.126.
+  * Update years of copyright.
+  * Add /me to Uploaders.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 02 Dec 2011 22:33:13 +0100
+
+libtest-differences-perl (0.50.0-1) unstable; urgency=low
+
+  [ Ignace Mouzannar ]
+  * New upstream release.
+  * debian/control:
+    - Added myself to Uploaders.
+    - Standards-Version bumped to 3.8.3.
+    - Added Build-Depends-Indep on libtest-pod-coverage-perl and
+      libtest-pod-perl.
+    - Rephrased the short description.
+  * debian/copyright:
+    - Updated the Debian changelog to follow Revision 196 of the Copyright
+      Proposal format.
+    - Added copyright to new upstream author.
+  * debian/watch:
+    - Updated the version matching regexp.
+    - Updated the "uversionmangle" to split the version number in order to be
+      consistent with older versions (i.e. 500 -> 50.0).
+
+  [ gregor herrmann ]
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+  * debian/control: Added: ${misc:Depends} to Depends: field.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Changed: Replace versioned (build-)dependency on
+    perl (>= 5.6.0-{12,16}) with an unversioned dependency on perl (as
+    permitted by Debian Policy 3.8.3).
+
+ -- Ignace Mouzannar <mouzannar@gmail.com>  Sun, 18 Oct 2009 01:28:35 +0200
+
+libtest-differences-perl (0.48.01-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza).
+  * Set Maintainer to Debian Perl Group.
+  * Use dist-based URL in debian/watch.
+  * debian/rules: delete /usr/lib/perl5 only if it exists.
+
+  [ Damyan Ivanov ]
+  * debian/watch: do not match developer releases; add mangling to convert
+    accidential x.yyzz version to x.yy.zz
+  * New upstream release
+  * debian/rules trimmed out using debhelper 7
+  * add myself to Uploaders
+  * cite exact copyright statement in debian/copyright
+  * Standards-Version 3.8.0 (no changes needed)
+
+ -- Damyan Ivanov <dmn@debian.org>  Fri, 08 Aug 2008 23:50:58 +0300
+
+libtest-differences-perl (0.47-2) unstable; urgency=low
+
+  * Adds debian/watch so uscan will actually work.
+
+ -- Jay Bonci <jaybonci@debian.org>  Mon, 11 Oct 2004 01:44:50 -0400
+
+libtest-differences-perl (0.47-1) unstable; urgency=low
+
+  * Initial Release (Closes: #178083)
+
+ -- Jay Bonci <jaybonci@debian.org>  Sun, 21 Sep 2003 03:35:41 -0400
